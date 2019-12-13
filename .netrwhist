@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/Users/abhishek.prakash/Workspace/EC/portal/app/ui/modules/products/containers/product-list'
+let g:netrw_dirhist_8='/Users/abhishek.prakash/Workspace/EC/portal/app/ui/modules/products/containers'
+let g:netrw_dirhist_7='/Users/abhishek.prakash/Workspace/EC/portal/app/ui/modules/products'
+let g:netrw_dirhist_6='/Users/abhishek.prakash/Workspace/EC/portal/app/ui/modules'
+let g:netrw_dirhist_5='/Users/abhishek.prakash/Workspace/EC/portal/app/ui'
+let g:netrw_dirhist_4='/Users/abhishek.prakash/Workspace/EC/portal/app'
+let g:netrw_dirhist_3='/Users/abhishek.prakash/Workspace/EC/portal'
+let g:netrw_dirhist_2='/Users/abhishek.prakash/Workspace/EC/portal/app'
+let g:netrw_dirhist_1='/Users/abhishek.prakash/Workspace/EC/portal'
