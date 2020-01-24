@@ -2,7 +2,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'dikiaap/minimalist'
 Plug 'morhetz/gruvbox'
-Plug 'leafgarland/typescript-vim'
+"Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'ianks/vim-tsx'
 
 " COC Plugin
@@ -18,6 +19,8 @@ let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-emmet', 'coc-tsl
 Plug 'scrooloose/nerdtree'
 Plug 'rhysd/git-messenger.vim'
 Plug 'jreybert/vimagit'
+let NERDTreeShowHidden=1
+
 
 " FZF Plugin
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -30,6 +33,14 @@ let g:AutoPairsUseInsertedCount = 1
 " vim js file import
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
+let g:js_file_import_string_quote = '"'
+set statusline+=%{gutentags#statusline()}
+
+" vim auto close
+Plug 'townk/vim-autoclose'
+
+" vim multiple select cursors
+Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()
 
@@ -49,5 +60,7 @@ colorscheme gruvbox
 
 " Mapping for frequently used keys
 nnoremap <silent> <Space> :NERDTreeToggle<CR>
-nnoremap <silent> <C-Space> :FZF<CR>
+nnoremap <silent> <C-Space> :JsFileImport<CR>
+nnoremap <silent> <C-g> :JsGotoDefinition<CR>
+nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
 " nnoremap <Leader>s <Plug>(SortJsFileImport)
